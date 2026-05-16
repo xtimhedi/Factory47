@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dfnv4paag7oel"]
+
+[ext_resource type="PackedScene" uid="uid://bwggrf7sbmkcv" path="res://FPC/PlayerCharacter/player_character_scene.tscn" id="1_b1alg"]
+[ext_resource type="Script" uid="uid://dp6ftgfa6eahs" path="res://GUI/Scripts/MainGameScene.gd" id="1_sj5wc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b1alg"]
+
+[sub_resource type="Sky" id="Sky_sj5wc"]
+sky_material = SubResource("ProceduralSkyMaterial_b1alg")
+
+[sub_resource type="Environment" id="Environment_b1alg"]
+background_mode = 2
+sky = SubResource("Sky_sj5wc")
+glow_enabled = true
+glow_intensity = 8.0
+
+[node name="MainGameScene" type="Node3D" unique_id=2123660681]
+script = ExtResource("1_sj5wc")
+
+[node name="PlayerCharacter" parent="." unique_id=1091993660 instance=ExtResource("1_b1alg")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5918088, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=661773679]
+environment = SubResource("Environment_b1alg")

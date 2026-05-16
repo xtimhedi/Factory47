@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dnimamsx6rbok"]
+
+[ext_resource type="Script" uid="uid://crfbgtxneur2l" path="res://Scripts/ItemData.gd" id="1_3nk3j"]
+[ext_resource type="Texture2D" uid="uid://d1rq7s4jjcfa0" path="res://Assets/Grass.png" id="1_uxrvs"]
+
+[resource]
+script = ExtResource("1_3nk3j")
+id = "factory:grass_block"
+name = "Grass Block"
+icon = ExtResource("1_uxrvs")
+description = "A Grass Block\\nBuiltin to Factory47"
+metadata/_custom_type_script = "uid://crfbgtxneur2l"

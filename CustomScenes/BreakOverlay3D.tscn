@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bj0xwwllwia21"]
+
+[ext_resource type="Shader" uid="uid://ddiq170donp66" path="res://CustomScenes/BreakOverlay3D.gdshader" id="1_r2uq7"]
+[ext_resource type="Texture2D" uid="uid://tkln5bofgtl3" path="res://Assets/breaking.png" id="2_jg8c2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jg8c2"]
+render_priority = 0
+shader = ExtResource("1_r2uq7")
+shader_parameter/albedo_texture = ExtResource("2_jg8c2")
+shader_parameter/frame_index = 0.0
+shader_parameter/total_frames = 4.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_xmctl"]
+material = SubResource("ShaderMaterial_jg8c2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" unique_id=1761632923]
+transform = Transform3D(1.01, 0, 0, 0, 1.01, 0, 0, 0, 1.01, 0, 0, 0)
+mesh = SubResource("BoxMesh_xmctl")

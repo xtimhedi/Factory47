@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c4jpskthw84m2"]
+
+[ext_resource type="Script" uid="uid://pciy0uad42db" path="res://Blocks/IronOre.gd" id="1_ekn34"]
+[ext_resource type="Texture2D" uid="uid://cys43ww53uhcf" path="res://Assets/Iron.png" id="1_otnrd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ekn34"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5r26"]
+albedo_texture = ExtResource("1_otnrd")
+uv1_triplanar = true
+uv2_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_qkvlm"]
+
+[node name="IronOre" type="Node3D" unique_id=544928663]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=233906837]
+script = ExtResource("1_ekn34")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1603054020]
+shape = SubResource("BoxShape3D_ekn34")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=1478793116]
+unique_name_in_owner = true
+material_override = SubResource("StandardMaterial3D_l5r26")
+mesh = SubResource("BoxMesh_qkvlm")

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cola1hows58kj"]
+
+[ext_resource type="Script" uid="uid://b7xlik02y0m4d" path="res://Game/LoadingScene.gd" id="1_kmb3c"]
+
+[node name="LoadingScene" type="Node2D" unique_id=1988554728]
+script = ExtResource("1_kmb3c")
+
+[node name="Label" type="Label" parent="." unique_id=1427003414]
+offset_left = 216.0
+offset_top = 176.0
+offset_right = 971.0
+offset_bottom = 427.0
+theme_override_font_sizes/font_size = 90
+text = "the game is
+       probably loading"
+
+[node name="Label" type="Label" parent="Label" unique_id=2106703733]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 280.0
+offset_right = 923.0
+offset_bottom = 531.0
+theme_override_font_sizes/font_size = 30
+text = "It is NOT frozen(probably) it is just generating my
+unoptimized as hell terrain"
+
+[node name="counter" type="Label" parent="." unique_id=1065247982]
+offset_left = -1288.0
+offset_top = -392.0
+offset_right = -1144.0
+offset_bottom = -328.0
+theme_override_font_sizes/font_size = 29
+text = "..."

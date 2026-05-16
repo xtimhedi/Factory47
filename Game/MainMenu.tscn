@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dkw65q3p273ue"]
+
+[ext_resource type="PackedScene" uid="uid://brp1jmkihlsgi" path="res://GUI/Scenes/MainMenuUI.tscn" id="1_omlcl"]
+
+[node name="MainMenu" type="Node2D" unique_id=1035106997]
+
+[node name="MainMenuUI" parent="." unique_id=1710070719 instance=ExtResource("1_omlcl")]
+offset_left = 96.0
+offset_top = 104.0
+offset_right = 96.0
+offset_bottom = 104.0

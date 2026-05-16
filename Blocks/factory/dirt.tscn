@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bda1wrgyhisce"]
+
+[ext_resource type="Script" uid="uid://bjx1ckpnlqjgp" path="res://Blocks/Dirt.gd" id="1_ndaa4"]
+[ext_resource type="Texture2D" uid="uid://bv8p3qq0hvl2c" path="res://Assets/Dirt.png" id="2_qsu4b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u6vqw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b7og7"]
+albedo_texture = ExtResource("2_qsu4b")
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_h86q5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0l3fr"]
+metallic = 1.0
+metallic_specular = 0.27
+texture_filter = 0
+
+[node name="Dirt" type="Node3D" unique_id=800422835]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1202001870]
+script = ExtResource("1_ndaa4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=815050502]
+shape = SubResource("BoxShape3D_u6vqw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=370890349]
+unique_name_in_owner = true
+material_override = SubResource("StandardMaterial3D_b7og7")
+mesh = SubResource("BoxMesh_h86q5")
+surface_material_override/0 = SubResource("StandardMaterial3D_0l3fr")

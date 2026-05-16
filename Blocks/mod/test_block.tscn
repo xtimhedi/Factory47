@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bu1ps5nta72i7"]
+
+[ext_resource type="Script" uid="uid://bblgynxtraryu" path="res://Blocks/mod/TestBlock.gd" id="1_75m12"]
+[ext_resource type="Texture2D" uid="uid://bfetk1mbes3l2" path="res://Assets/TestBlock.png" id="2_acxhi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_32fqv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kak84"]
+albedo_texture = ExtResource("2_acxhi")
+metallic = 1.0
+metallic_specular = 0.33
+metallic_texture = ExtResource("2_acxhi")
+roughness_texture = ExtResource("2_acxhi")
+emission_enabled = true
+emission = Color(0.48235294, 0, 0, 1)
+emission_energy_multiplier = 5000000.0
+clearcoat_enabled = true
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_75m12"]
+
+[node name="TestBlock" type="Node3D" unique_id=784209413]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=317221659]
+script = ExtResource("1_75m12")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1753841502]
+shape = SubResource("BoxShape3D_32fqv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=925167561]
+material_override = SubResource("StandardMaterial3D_kak84")
+mesh = SubResource("BoxMesh_75m12")

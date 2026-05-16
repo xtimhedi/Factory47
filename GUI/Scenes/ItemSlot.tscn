@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bx6xvlftgay13"]
+
+[ext_resource type="Script" uid="uid://8rnx4ag60sbq" path="res://GUI/Scripts/ItemSlot.gd" id="1_ufq0k"]
+
+[node name="ItemSlot" type="Control" unique_id=1329254204]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ufq0k")
+
+[node name="Button" type="Button" parent="." unique_id=1386488907]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Button" unique_id=1777414149]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 32.0
+offset_bottom = 32.0
+
+[node name="Label" type="Label" parent="Button" unique_id=610857868]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 47.0
+theme_override_font_sizes/font_size = 13
+text = "...."
+
+[connection signal="pressed" from="Button" to="." method="ChangeSelectedBlock"]

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://06fd6ci6e2bn"]
+
+[ext_resource type="Script" uid="uid://bh0qon1auqax8" path="res://Blocks/Stone.gd" id="1_3fprb"]
+[ext_resource type="Texture2D" uid="uid://hlyo6rxafo07" path="res://Assets/Stone.png" id="2_pju86"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v0rg2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0g1ml"]
+albedo_texture = ExtResource("2_pju86")
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ay0b7"]
+
+[node name="Stone" type="Node3D" unique_id=1226902359]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=26833289]
+script = ExtResource("1_3fprb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=934345342]
+shape = SubResource("BoxShape3D_v0rg2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=482661425]
+unique_name_in_owner = true
+material_override = SubResource("StandardMaterial3D_0g1ml")
+mesh = SubResource("BoxMesh_ay0b7")

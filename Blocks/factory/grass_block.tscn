@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bca7b8lgscrdf"]
+
+[ext_resource type="Script" uid="uid://corersvpufgqq" path="res://Blocks/GrassBlock.gd" id="1_eu56c"]
+[ext_resource type="Texture2D" uid="uid://d1rq7s4jjcfa0" path="res://Assets/Grass.png" id="2_ibjae"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sc5nl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2a5h8"]
+albedo_texture = ExtResource("2_ibjae")
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_ic2gy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxs4p"]
+metallic = 1.0
+metallic_specular = 0.27
+
+[node name="GrassBlock" type="Node3D" unique_id=72602173]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1979399115]
+script = ExtResource("1_eu56c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=724261090]
+shape = SubResource("BoxShape3D_sc5nl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=8102960]
+material_override = SubResource("StandardMaterial3D_2a5h8")
+mesh = SubResource("BoxMesh_ic2gy")
+surface_material_override/0 = SubResource("StandardMaterial3D_dxs4p")
